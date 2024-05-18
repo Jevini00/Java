@@ -1,0 +1,30 @@
+// Step 1: Variable to hold NFTs
+let nfts = [];
+
+// Step 2: mintNFT function
+function mintNFT(name, description, owner) {
+    const nft = {
+        name: name,
+        description: description,
+        owner: owner
+    };
+    nfts.push(nft);
+}
+
+// Step 3: listNFTs function
+function listNFTs() {
+    for (let i = 0; i < nfts.length; i++) {
+        console.log(`Name: ${nfts[i].name}, Description: ${nfts[i].description}, Owner: ${nfts[i].owner}`);
+    }
+}
+
+// Step 4: getTotalSupply function
+function getTotalSupply() {
+    return nfts.length;
+}
+
+// Example usage
+mintNFT("NFT 1", "First NFT", "Alice");
+mintNFT("NFT 2", "Second NFT", "Bob");
+listNFTs();
+console.log("Total Supply:", getTotalSupply());
